@@ -151,12 +151,7 @@ struct ContentView: View {
                 .frame(width: 65)
             
             Picker("", selection: $penaltyNumber) {
-                ForEach(0...30, id: \.self) { number in
-                    Text(number.description)
-                        .rotationEffect(Angle(degrees: 90))
-                        .foregroundStyle(Color.white)
-                        .font(.system(.title2, design: .rounded, weight: .bold))
-                }
+                PickerContent()
             }
             .pickerStyle(.wheel)
             .labelsHidden()

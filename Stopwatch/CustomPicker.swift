@@ -10,6 +10,18 @@
 
 import SwiftUI
 
+struct PickerContent: View {
+    var body: some View {
+        ForEach(0...30, id: \.self) { number in
+            Text(number.description)
+                .rotationEffect(Angle(degrees: 90))
+                .foregroundStyle(Color.white)
+                .font(.system(.title2, design: .rounded, weight: .bold))
+        }
+    }
+}
+
+
 struct HorizontalNumberPicker: View {
     @Binding var selectedNumber: Int
     private let range = 0...10
